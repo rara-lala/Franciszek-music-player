@@ -1,0 +1,24 @@
+<div class="bs-dialog-inner">
+  <header><div><span class="bs-eyebrow">BIELAWSKI · SALON PLAYER</span><h2>작은 살롱의 음악</h2></div><button type="button" data-action="close" aria-label="설정 닫기">×</button></header>
+  <p class="bs-muted">이름을 드래그하면 플레이어를 옮길 수 있습니다. 지정한 카드의 일대일 채팅에서만 표시됩니다.</p>
+  <fieldset><legend>연결할 인물</legend><p id="bs-bound"></p><button type="button" data-action="bind">지금 열린 카드를 프란치셰크로 지정</button><label class="bs-check"><input id="bs-enabled" type="checkbox"> 플레이어 사용</label></fieldset>
+  <fieldset><legend>재생과 화면</legend><label>화면 모드<select id="bs-theme"><option value="light">라이트 · 크림과 회녹색</option><option value="dark">다크 · 짙은 회녹색</option></select></label><label>음량<input id="bs-volume" type="range" min="0" max="1" step="0.01"></label><label class="bs-check"><input id="bs-autoplay" type="checkbox"> 채팅을 열면 첨부 테마곡부터 자동재생</label><p class="bs-muted">브라우저가 차단하면 처음 한 번 ▶를 눌러 주세요.</p><label>첨부 테마곡의 연주자 표시<input id="bs-performer" type="text" maxlength="160" placeholder="실제 연주자 또는 가상 연주자 표기"></label><button type="button" data-action="reset-position">플레이어 위치 초기화</button></fieldset>
+  <fieldset><legend>대화에 맞춘 선곡</legend><label class="bs-check"><input id="bs-auto" type="checkbox"> AI 자동 선곡</label><p class="bs-muted">연결된 채팅 AI에 최근 8개 메시지의 일부와 곡 목록을 보내므로 추가 토큰·요금이 발생할 수 있습니다. 답변 후 최소 간격을 두고 요청하며, 결과는 채팅에 쓰지 않습니다.</p><label>기본 프롬프트<select id="bs-preset"><option value="chopin">쇼팽곡만</option><option value="romantic">낭만주의시대 피아노곡 전체</option><option value="custom">직접 작성</option></select></label><label>선곡 프롬프트<textarea id="bs-prompt" rows="6" maxlength="5000"></textarea></label><p class="bs-muted">직접 수정하면 ‘직접 작성’으로 바뀝니다. 범위는 등록한 음원 안에서 적용됩니다. 첨부 테마곡은 첫 재생·전용 버튼용 예외입니다.</p><label>자동 선곡 최소 간격<select id="bs-interval"><option value="30">30초</option><option value="60">1분</option><option value="120">2분</option><option value="300">5분</option></select></label><button type="button" data-action="choose">현재 장면으로 지금 선곡</button><p class="bs-muted">테마곡을 재생 중이면 자동 선곡 결과는 끝난 뒤 이어집니다. 수동 일시정지는 AI가 해제하지 않습니다.</p></fieldset>
+  <fieldset><legend>곡 목록</legend><p class="bs-muted">기본 음원은 설치 파일에 포함됩니다. 다음·이전은 현재 선곡 범위 안에서 이동합니다. 직접 작성 모드에서는 먼저 AI 선곡으로 허용 목록을 만듭니다.</p><div id="bs-catalog"></div></fieldset>
+  <fieldset><legend>곡 추가</legend><p class="bs-muted">음원 파일 또는 직접 재생되는 HTTPS 주소를 넣으세요. 유튜브·스포티파이 페이지 주소는 음원 주소가 아닙니다. 파일은 이 브라우저에 보관되며 다른 기기에는 다시 추가해야 합니다.</p>
+    <form id="bs-add-form">
+      <label>곡명<input name="title" required maxlength="200" placeholder="예: 녹턴 2번 내림마장조"></label>
+      <label>작품번호<input name="opus" required maxlength="100" placeholder="Op. 9 No. 2"></label>
+      <label>작곡가<input name="composer" required maxlength="160" placeholder="Frédéric Chopin"></label>
+      <label>연주자<input name="performer" required maxlength="160" placeholder="음원에 표기된 연주자"></label>
+      <label>시대<select name="era"><option value="romantic">낭만주의</option><option value="other">그 외</option></select></label>
+      <label>편성<select name="instrument"><option value="piano">피아노 독주</option><option value="other">그 외</option></select></label>
+      <label>분위기<input name="tags" maxlength="300" placeholder="예: 조용함, 애수, 빗소리"></label>
+      <label>음원 파일<input name="file" type="file" accept="audio/*,.mp3,.ogg,.oga,.flac,.m4a,.wav"></label>
+      <label>또는 음원 주소<input name="src" type="url" placeholder="https://…/music.mp3"></label>
+      <button type="submit">곡 목록에 추가</button>
+    </form>
+  </fieldset>
+  <p id="bs-settings-status" role="status" class="bs-muted"></p>
+  <footer class="bs-muted">v1.0.0 · 설정은 자동으로 저장됩니다.</footer>
+</div>

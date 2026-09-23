@@ -1,0 +1,70 @@
+[
+  {
+    "id": "bielawski-theme",
+    "composer": "Franciszek Bielawski",
+    "title": "Valse mélancolique · 왈츠 4번 가단조",
+    "opus": "Op. 31 No. 2",
+    "performer": "Aleksander Wierzyński",
+    "tags": "기본 테마",
+    "era": "fictional",
+    "instrument": "piano",
+    "src": "media/bielawski-theme.mp3",
+    "license": "사용자 제공 음원 — 코드 라이선스 제외"
+  },
+  {
+    "id": "chopin-waltz64",
+    "composer": "Frédéric Chopin",
+    "title": "왈츠 7번 올림다단조",
+    "opus": "Op. 64 No. 2",
+    "performer": "Luke Faulkner",
+    "tags": "우아함,그리움,살롱,절제",
+    "era": "romantic",
+    "instrument": "piano",
+    "src": "media/chopin-waltz64.oga",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Chopin-waltz-op-64-no-2-in-c-sharp-minor.oga",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Chopin-waltz-op-64-no-2-in-c-sharp-minor.oga",
+    "license": "CC0 1.0"
+  },
+  {
+    "id": "chopin-nocturne37",
+    "composer": "Frédéric Chopin",
+    "title": "녹턴 12번 사장조",
+    "opus": "Op. 37 No. 2",
+    "performer": "Olga Gurevich",
+    "tags": "고요함,친밀함,꿈,온기",
+    "era": "romantic",
+    "instrument": "piano",
+    "src": "media/chopin-nocturne37.ogg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Chopin_Nocturne_Op_37_no_2_in_G_major_Olga_Gurevich.ogg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Chopin_Nocturne_Op_37_no_2_in_G_major_Olga_Gurevich.ogg",
+    "license": "CC0 1.0"
+  },
+  {
+    "id": "chopin-nocturne15",
+    "composer": "Frédéric Chopin",
+    "title": "녹턴 6번 사단조",
+    "opus": "Op. 15 No. 3",
+    "performer": "Olga Gurevich",
+    "tags": "슬픔,기도,침묵,고독",
+    "era": "romantic",
+    "instrument": "piano",
+    "src": "media/chopin-nocturne15.ogg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Chopin_Nocturne_in_G_minor%2C_Op_15_no_3_Olga_Gurevich.ogg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Chopin_Nocturne_in_G_minor%2C_Op_15_no_3_Olga_Gurevich.ogg",
+    "license": "CC0 1.0"
+  },
+  {
+    "id": "schumann-dreaming",
+    "composer": "Robert Schumann",
+    "title": "어린이의 정경 중 트로이메라이",
+    "opus": "Op. 15 No. 7",
+    "performer": "Donald Betts",
+    "tags": "회상,다정함,꿈,위로",
+    "era": "romantic",
+    "instrument": "piano",
+    "src": "media/schumann-dreaming.ogg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Robert_Schumann_-_scenes_from_childhood%2C_op._15_-_vii._dreaming.ogg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Robert_Schumann_-_scenes_from_childhood%2C_op._15_-_vii._dreaming.ogg",
+    "license": "Public domain (PD-author)"
+  }
+]

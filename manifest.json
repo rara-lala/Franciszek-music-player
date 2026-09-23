@@ -1,0 +1,15 @@
+{
+  "display_name": "Bielawski · Salon Player",
+  "loading_order": 100,
+  "requires": [],
+  "optional": [],
+  "js": "index.js",
+  "css": "style.css",
+  "author": "Bielawski Salon Player contributors",
+  "version": "1.0.0",
+  "auto_update": false,
+  "hooks": {
+    "disable": "onDisable",
+    "enable": "onEnable"
+  }
+}

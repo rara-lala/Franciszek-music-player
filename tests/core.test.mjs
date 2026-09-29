@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {normalize,eligible,nextTrack,parseChoice,time,bound,ORDER} from '../core.mjs';
+test('four-track order survives reorder, rejects foreign tracks',()=>{assert.deepEqual(normalize().order,ORDER);assert.deepEqual(normalize({order:['nocturne','foreign','nocturne']}).order,['nocturne','waltz','prelude','ballade']);});
+test('disabled pool and wraparound',()=>{const s=normalize({excluded:['ballade']});assert.deepEqual(eligible(s),['waltz','prelude','nocturne']);assert.equal(nextTrack(eligible(s),'nocturne'),'waltz');assert.equal(nextTrack(eligible(s),'waltz',-1),'nocturne');assert.equal(nextTrack([],'waltz'),null);});
+test('shuffle does not repeat current when alternatives exist',()=>{for(let i=0;i<100;i++)assert.notEqual(nextTrack(ORDER,'waltz',1,true),'waltz');});
+test('AI result must be an eligible id and explicit mood-change boolean',()=>{assert.equal(parseChoice('{"id":"foreign","changed":true}',ORDER),null);assert.equal(parseChoice('{"id":"waltz"}',ORDER),null);assert.equal(parseChoice('{"id":"waltz","changed":false}',ORDER).changed,false);});
+test('scope uses exact avatar, excludes groups',()=>{const s=normalize({avatar:'a.png'}),c={characters:[{avatar:'a.png'}],characterId:0};assert.ok(bound(c,s));assert.equal(bound({...c,groupId:'group'},s),false);assert.equal(bound({...c,characterId:1},s),false);});
+test('time formats loading and durations',()=>{assert.equal(time(NaN),'0:00');assert.equal(time(125.4),'2:05');});
